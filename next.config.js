@@ -3,13 +3,14 @@ const withPlugins = require("next-compose-plugins");
 
 /** @type {import("next").NextConfig} */
 const nextConfig = {
-  experimental: {
-    newNextLinkBehavior: true,
-  },
-  reactStrictMode: true,
+	reactStrictMode: true,
+	experimental: {
+		newNextLinkBehavior: true,
+	},
+	swcMinify: true,
 };
 
 module.exports = withPlugins(
-  [withBundleAnalyzer({ enabled: process.env.ANALYZE === "true" })],
-  nextConfig,
+	[withBundleAnalyzer({ enabled: process.env.ANALYZE === "true" })],
+	nextConfig,
 );

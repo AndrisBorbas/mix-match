@@ -1,11 +1,12 @@
 {
-  "extends": "@tsconfig/next/tsconfig.json",
-  "compilerOptions": {
-    "baseUrl": "./src/",
-    "paths": { "@/*": ["*"], "*": [""] },
-    "strict": true,
-    "importsNotUsedAsValues": "error"
-  },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
-  "exclude": ["node_modules/", ".next/"]
+	"extends": "@tsconfig/next/tsconfig.json",
+	"compilerOptions": {
+		"sourceMap": true,
+		"baseUrl": "./src/",
+		"paths": { "@/*": ["*"], "*": [""] },
+		"strict": true,
+		"importsNotUsedAsValues": "error"
+	},
+	"include": ["*.config.js", "**/*.ts", "**/*.tsx"],
+	"exclude": ["node_modules/", ".next/", "public"]
 }
