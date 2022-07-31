@@ -1,7 +1,9 @@
 {
 	"name": "mix-match",
+	"version": "0.0.1",
 	"private": true,
 	"scripts": {
+		"start": "next start",
 		"build": "next build",
 		"build:analyze": "cross-env ANALYZE=true npm run build",
 		"clean": "git clean --interactive -dx --exclude .env.local --exclude .env.*.local --exclude node_modules/ --exclude .husky/",
@@ -14,7 +16,7 @@
 		"lint:prettier": "prettier --check --ignore-path .gitignore .",
 		"lint:typescript": "tsc",
 		"prepare": "husky install",
-		"start": "next start"
+		"postinstall": "prisma generate"
 	},
 	"browserslist": [
 		"defaults",
@@ -33,7 +35,7 @@
 		"@tailwindcss/line-clamp": "^0.4.0",
 		"@tailwindcss/typography": "^0.5.2",
 		"autoprefixer": "10.4.5",
-		"clsx": "^1.1.1",
+		"clsx": "^1.2.0",
 		"cookie": "^0.5.0",
 		"next": "^12.2.0",
 		"next-compose-plugins": "^2.2.1",
@@ -48,13 +50,13 @@
 	"devDependencies": {
 		"@tsconfig/next": "^1.0.2",
 		"@types/cookie": "^0.5.1",
-		"@types/node": "^18.0.0",
+		"@types/node": "^18.0.1",
 		"@types/react": "^18.0.14",
 		"@types/react-dom": "^18.0.5",
-		"@typescript-eslint/eslint-plugin": "^5.30.0",
-		"@typescript-eslint/parser": "^5.30.0",
+		"@typescript-eslint/eslint-plugin": "^5.30.4",
+		"@typescript-eslint/parser": "^5.30.4",
 		"cross-env": "^7.0.3",
-		"eslint": "^8.18.0",
+		"eslint": "^8.19.0",
 		"eslint-config-airbnb": "^19.0.4",
 		"eslint-config-airbnb-typescript": "^17.0.0",
 		"eslint-config-next": "^12.2.0",
